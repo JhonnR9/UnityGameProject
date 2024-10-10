@@ -1,0 +1,1270 @@
+fileFormatVersion: 2
+guid: 28bbd21dae92495479eddf4c9bb2fbe1
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Armored Skeleton_Frame_0
+    originalName: 
+    pivot: {x: 0.33333328, y: -1.6}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 72
+      width: 21
+      height: 25
+    spriteID: 72aad88a707220846922f09403c29b67
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 141, y: 72}
+  - name: Armored Skeleton_Frame_35
+    originalName: 
+    pivot: {x: 0.33333328, y: -1.6}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 105
+      width: 21
+      height: 25
+    spriteID: 0d5436f147c59bf498dbb9ae83d8c62c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 141, y: 105}
+  - name: Armored Skeleton_Frame_36
+    originalName: 
+    pivot: {x: 0.24137928, y: -1.4814814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 80
+      width: 29
+      height: 27
+    spriteID: e7b16e0266c007b4390bbe61e7e989c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 80}
+  - name: Armored Skeleton_Frame_37
+    originalName: 
+    pivot: {x: 0.21874997, y: -2.3529413}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 91
+      y: 228
+      width: 32
+      height: 17
+    spriteID: e8bf8e8696f0f9d4b883f1316184954b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 91, y: 228}
+  - name: Armored Skeleton_Frame_38
+    originalName: 
+    pivot: {x: 0.21874997, y: -2.6666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 237
+      width: 32
+      height: 15
+    spriteID: 68a0e5a4b74b4054da45d9b75c71e218
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 237}
+  - name: Armored Skeleton_Frame_1
+    originalName: 
+    pivot: {x: 0.33333328, y: -1.6}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 138
+      width: 21
+      height: 25
+    spriteID: 462c177ec34e089438beeadce614e031
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 141, y: 138}
+  - name: Armored Skeleton_Frame_2
+    originalName: 
+    pivot: {x: 0.33333328, y: -1.5384616}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 91
+      y: 92
+      width: 21
+      height: 26
+    spriteID: d955ef8fda52b4c43a9a93dcd884be76
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 91, y: 92}
+  - name: Armored Skeleton_Frame_3
+    originalName: 
+    pivot: {x: 0.33333328, y: -1.5384616}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 91
+      y: 126
+      width: 21
+      height: 26
+    spriteID: df0b6d69b4ea5be4e80e98044fed37f1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 91, y: 126}
+  - name: Armored Skeleton_Frame_4
+    originalName: 
+    pivot: {x: 0.33333328, y: -1.5384616}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 91
+      y: 160
+      width: 21
+      height: 26
+    spriteID: 1929808ded9944d4ebf630c06cd29036
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 91, y: 160}
+  - name: Armored Skeleton_Frame_5
+    originalName: 
+    pivot: {x: 0.33333328, y: -1.5384616}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 91
+      y: 194
+      width: 21
+      height: 26
+    spriteID: 1f60372f352f37a478a103b5908adedf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 91, y: 194}
+  - name: Armored Skeleton_Frame_6
+    originalName: 
+    pivot: {x: 0.33333328, y: -1.6}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 171
+      width: 21
+      height: 25
+    spriteID: d7793e464018f9247bbeac7572324795
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 141, y: 171}
+  - name: Armored Skeleton_Frame_7
+    originalName: 
+    pivot: {x: 0.33333328, y: -1.5384616}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 4
+      width: 21
+      height: 26
+    spriteID: 01f0c118d4eabfa4c823cfd57eb9a4a1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 141, y: 4}
+  - name: Armored Skeleton_Frame_8
+    originalName: 
+    pivot: {x: 0.33333328, y: -1.6}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 204
+      width: 21
+      height: 25
+    spriteID: 75d9ea2a347f7e941aa422ec9041f99a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 141, y: 204}
+  - name: Armored Skeleton_Frame_9
+    originalName: 
+    pivot: {x: 0.33333328, y: -1.6666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 170
+      y: 134
+      width: 21
+      height: 24
+    spriteID: de95635e3edfad34c834275baa100e89
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 170, y: 134}
+  - name: Armored Skeleton_Frame_10
+    originalName: 
+    pivot: {x: 0.33333328, y: -1.6}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 170
+      y: 35
+      width: 21
+      height: 25
+    spriteID: a0f30fad97172c54b956fa1e6881f472
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 170, y: 35}
+  - name: Armored Skeleton_Frame_11
+    originalName: 
+    pivot: {x: 0.33333328, y: -1.4814814}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 173
+      width: 21
+      height: 27
+    spriteID: bf059e7a418be5c4cac05e0151e6e011
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 173}
+  - name: Armored Skeleton_Frame_12
+    originalName: 
+    pivot: {x: 0.33333328, y: -1.5384616}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 141
+      y: 38
+      width: 21
+      height: 26
+    spriteID: 054396f132115214c88268aef0a82dea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 141, y: 38}
+  - name: Armored Skeleton_Frame_13
+    originalName: 
+    pivot: {x: 0.33333328, y: -1.6666666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 170
+      y: 166
+      width: 21
+      height: 24
+    spriteID: fba068af83f56dd479319ff852191373
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 170, y: 166}
+  - name: Armored Skeleton_Frame_14
+    originalName: 
+    pivot: {x: 0.33333328, y: -1.6}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 170
+      y: 68
+      width: 21
+      height: 25
+    spriteID: b1137fa230ca01f488ef5066fdf5710c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 170, y: 68}
+  - name: Armored Skeleton_Frame_15
+    originalName: 
+    pivot: {x: 0.30434778, y: -1.6956521}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 170
+      y: 4
+      width: 23
+      height: 23
+    spriteID: cb3ceeb022d7256408e5cc742dc83f64
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 170, y: 4}
+  - name: Armored Skeleton_Frame_16
+    originalName: 
+    pivot: {x: 0.25925922, y: -1.9047619}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 208
+      width: 27
+      height: 21
+    spriteID: 1b7e1abb0025216468df2f1d160bb1c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 208}
+  - name: Armored Skeleton_Frame_17
+    originalName: 
+    pivot: {x: 0.40740746, y: -1.9047619}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 91
+      y: 63
+      width: 27
+      height: 21
+    spriteID: 120bc87b65b5e794d8427f3852e20238
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 91, y: 63}
+  - name: Armored Skeleton_Frame_18
+    originalName: 
+    pivot: {x: 0.16666664, y: -1.9047619}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 91
+      y: 4
+      width: 42
+      height: 21
+    spriteID: e242b30b8a18dc147982a9a0379c5583
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 91, y: 4}
+  - name: Armored Skeleton_Frame_19
+    originalName: 
+    pivot: {x: 0.17948717, y: -1.7727271}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 91
+      y: 33
+      width: 39
+      height: 22
+    spriteID: 192e5fc2e9e5131458545f0354aea436
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 91, y: 33}
+  - name: Armored Skeleton_Frame_20
+    originalName: 
+    pivot: {x: 0.21212119, y: -1.9047619}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 115
+      width: 33
+      height: 21
+    spriteID: 12dd8027c3d20614bb15d2333e1f3acf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 115}
+  - name: Armored Skeleton_Frame_21
+    originalName: 
+    pivot: {x: 0.21212119, y: -1.9047619}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 144
+      width: 33
+      height: 21
+    spriteID: ab16706cfe52cc84fb7872d140f70e68
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 144}
+  - name: Armored Skeleton_Frame_22
+    originalName: 
+    pivot: {x: 0.33333328, y: -1.6}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 170
+      y: 101
+      width: 21
+      height: 25
+    spriteID: 3cfbaf67ca079324899189d608ed10db
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 170, y: 101}
+  - name: Armored Skeleton_Frame_23
+    originalName: 
+    pivot: {x: 0.32258064, y: -1.3103448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 170
+      width: 31
+      height: 29
+    spriteID: 9d2393be8f11904488ac52ad6ce00187
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 170}
+  - name: Armored Skeleton_Frame_24
+    originalName: 
+    pivot: {x: 0.38888884, y: -1.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 4
+      width: 36
+      height: 30
+    spriteID: 50209ef4cee0ca94e9880f0e9854c5e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 4}
+  - name: Armored Skeleton_Frame_25
+    originalName: 
+    pivot: {x: 0.35483876, y: -1.09375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 90
+      width: 31
+      height: 32
+    spriteID: 8122c438eadcad848998d0acde370a73
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 90}
+  - name: Armored Skeleton_Frame_26
+    originalName: 
+    pivot: {x: 0.31428576, y: -0.9428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 35
+      height: 35
+    spriteID: 1266c024c50ed444fa8d9826b8b30f23
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Armored Skeleton_Frame_27
+    originalName: 
+    pivot: {x: 0.32258064, y: -1.3103448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 207
+      width: 31
+      height: 29
+    spriteID: c8c655a36fcd2cb498530f0184005b0e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 207}
+  - name: Armored Skeleton_Frame_28
+    originalName: 
+    pivot: {x: 0.38888884, y: -1.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 42
+      width: 36
+      height: 30
+    spriteID: a2961edb692f2d54cb1d9b4cce6184f7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 42}
+  - name: Armored Skeleton_Frame_29
+    originalName: 
+    pivot: {x: 0.35483876, y: -1.09375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 130
+      width: 31
+      height: 32
+    spriteID: 4c612c4d19b3dfb4daa3e5ba7410f995
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 130}
+  - name: Armored Skeleton_Frame_30
+    originalName: 
+    pivot: {x: 0.31428576, y: -0.9428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 47
+      width: 35
+      height: 35
+    spriteID: a658837957bcb2e43abf3fa01e98ef54
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 47}
+  - name: Armored Skeleton_Frame_31
+    originalName: 
+    pivot: {x: 0.36842102, y: -1.5384616}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 170
+      y: 198
+      width: 19
+      height: 26
+    spriteID: 05fab99bc90d3f345b2c15e504a359a5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 170, y: 198}
+  - name: Armored Skeleton_Frame_32
+    originalName: 
+    pivot: {x: 0.36842102, y: -1.5384616}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 4
+      width: 19
+      height: 26
+    spriteID: 9d5cbdf29d358a7438e867a707b9ecc3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 4}
+  - name: Armored Skeleton_Frame_33
+    originalName: 
+    pivot: {x: 0.36842102, y: -1.5384616}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 38
+      width: 19
+      height: 26
+    spriteID: 94788cf137a4aee47b7b00f5f133bdd5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 38}
+  - name: Armored Skeleton_Frame_34
+    originalName: 
+    pivot: {x: 0.36842102, y: -1.5384616}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 201
+      y: 72
+      width: 19
+      height: 26
+    spriteID: 319f62d8988b66c4b92584d9ce4c5690
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 201, y: 72}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -584312185
+    name: Armored Skeleton
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Armored Skeleton_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 21
+        height: 25
+      spriteId: 72aad88a707220846922f09403c29b67
+    - name: Armored Skeleton_Frame_35
+      frameIndex: 35
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 21
+        height: 25
+      spriteId: 0d5436f147c59bf498dbb9ae83d8c62c
+    - name: Armored Skeleton_Frame_36
+      frameIndex: 36
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 29
+        height: 27
+      spriteId: e7b16e0266c007b4390bbe61e7e989c4
+    - name: Armored Skeleton_Frame_37
+      frameIndex: 37
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 32
+        height: 17
+      spriteId: e8bf8e8696f0f9d4b883f1316184954b
+    - name: Armored Skeleton_Frame_38
+      frameIndex: 38
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 32
+        height: 15
+      spriteId: 68a0e5a4b74b4054da45d9b75c71e218
+    - name: Armored Skeleton_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 21
+        height: 25
+      spriteId: 462c177ec34e089438beeadce614e031
+    - name: Armored Skeleton_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 21
+        height: 26
+      spriteId: d955ef8fda52b4c43a9a93dcd884be76
+    - name: Armored Skeleton_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 21
+        height: 26
+      spriteId: df0b6d69b4ea5be4e80e98044fed37f1
+    - name: Armored Skeleton_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 21
+        height: 26
+      spriteId: 1929808ded9944d4ebf630c06cd29036
+    - name: Armored Skeleton_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 21
+        height: 26
+      spriteId: 1f60372f352f37a478a103b5908adedf
+    - name: Armored Skeleton_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 21
+        height: 25
+      spriteId: d7793e464018f9247bbeac7572324795
+    - name: Armored Skeleton_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 21
+        height: 26
+      spriteId: 01f0c118d4eabfa4c823cfd57eb9a4a1
+    - name: Armored Skeleton_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 21
+        height: 25
+      spriteId: 75d9ea2a347f7e941aa422ec9041f99a
+    - name: Armored Skeleton_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 21
+        height: 24
+      spriteId: de95635e3edfad34c834275baa100e89
+    - name: Armored Skeleton_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 21
+        height: 25
+      spriteId: a0f30fad97172c54b956fa1e6881f472
+    - name: Armored Skeleton_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 21
+        height: 27
+      spriteId: bf059e7a418be5c4cac05e0151e6e011
+    - name: Armored Skeleton_Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 21
+        height: 26
+      spriteId: 054396f132115214c88268aef0a82dea
+    - name: Armored Skeleton_Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 21
+        height: 24
+      spriteId: fba068af83f56dd479319ff852191373
+    - name: Armored Skeleton_Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 21
+        height: 25
+      spriteId: b1137fa230ca01f488ef5066fdf5710c
+    - name: Armored Skeleton_Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 39
+        width: 23
+        height: 23
+      spriteId: cb3ceeb022d7256408e5cc742dc83f64
+    - name: Armored Skeleton_Frame_16
+      frameIndex: 16
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 27
+        height: 21
+      spriteId: 1b7e1abb0025216468df2f1d160bb1c0
+    - name: Armored Skeleton_Frame_17
+      frameIndex: 17
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 40
+        width: 27
+        height: 21
+      spriteId: 120bc87b65b5e794d8427f3852e20238
+    - name: Armored Skeleton_Frame_18
+      frameIndex: 18
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 42
+        height: 21
+      spriteId: e242b30b8a18dc147982a9a0379c5583
+    - name: Armored Skeleton_Frame_19
+      frameIndex: 19
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 39
+        width: 39
+        height: 22
+      spriteId: 192e5fc2e9e5131458545f0354aea436
+    - name: Armored Skeleton_Frame_20
+      frameIndex: 20
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 33
+        height: 21
+      spriteId: 12dd8027c3d20614bb15d2333e1f3acf
+    - name: Armored Skeleton_Frame_21
+      frameIndex: 21
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 33
+        height: 21
+      spriteId: ab16706cfe52cc84fb7872d140f70e68
+    - name: Armored Skeleton_Frame_22
+      frameIndex: 22
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 21
+        height: 25
+      spriteId: 3cfbaf67ca079324899189d608ed10db
+    - name: Armored Skeleton_Frame_23
+      frameIndex: 23
+      additiveSortOrder: 0
+      cellRect:
+        x: 40
+        y: 38
+        width: 31
+        height: 29
+      spriteId: 9d2393be8f11904488ac52ad6ce00187
+    - name: Armored Skeleton_Frame_24
+      frameIndex: 24
+      additiveSortOrder: 0
+      cellRect:
+        x: 36
+        y: 36
+        width: 36
+        height: 30
+      spriteId: 50209ef4cee0ca94e9880f0e9854c5e7
+    - name: Armored Skeleton_Frame_25
+      frameIndex: 25
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 35
+        width: 31
+        height: 32
+      spriteId: 8122c438eadcad848998d0acde370a73
+    - name: Armored Skeleton_Frame_26
+      frameIndex: 26
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 33
+        width: 35
+        height: 35
+      spriteId: 1266c024c50ed444fa8d9826b8b30f23
+    - name: Armored Skeleton_Frame_27
+      frameIndex: 27
+      additiveSortOrder: 0
+      cellRect:
+        x: 40
+        y: 38
+        width: 31
+        height: 29
+      spriteId: c8c655a36fcd2cb498530f0184005b0e
+    - name: Armored Skeleton_Frame_28
+      frameIndex: 28
+      additiveSortOrder: 0
+      cellRect:
+        x: 36
+        y: 36
+        width: 36
+        height: 30
+      spriteId: a2961edb692f2d54cb1d9b4cce6184f7
+    - name: Armored Skeleton_Frame_29
+      frameIndex: 29
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 35
+        width: 31
+        height: 32
+      spriteId: 4c612c4d19b3dfb4daa3e5ba7410f995
+    - name: Armored Skeleton_Frame_30
+      frameIndex: 30
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 33
+        width: 35
+        height: 35
+      spriteId: a658837957bcb2e43abf3fa01e98ef54
+    - name: Armored Skeleton_Frame_31
+      frameIndex: 31
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 19
+        height: 26
+      spriteId: 05fab99bc90d3f345b2c15e504a359a5
+    - name: Armored Skeleton_Frame_32
+      frameIndex: 32
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 19
+        height: 26
+      spriteId: 9d5cbdf29d358a7438e867a707b9ecc3
+    - name: Armored Skeleton_Frame_33
+      frameIndex: 33
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 19
+        height: 26
+      spriteId: 94788cf137a4aee47b7b00f5f133bdd5
+    - name: Armored Skeleton_Frame_34
+      frameIndex: 34
+      additiveSortOrder: 0
+      cellRect:
+        x: 43
+        y: 40
+        width: 19
+        height: 26
+      spriteId: 319f62d8988b66c4b92584d9ce4c5690
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 100, y: 100}
