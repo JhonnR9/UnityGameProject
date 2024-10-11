@@ -18,11 +18,8 @@ public class WizardStateMachine : StateMachine
         states = new Dictionary<States, IState>
         {
             { States.Patrol, new WizardPatrolState() },
-            { States.Idle, new WizardIdleState() },
             { States.Chase, new WizardChaseState()},
-            { States.Attack1, new WizardAttack01State()},
-            { States.Attack2, new WizardAttack02State()},
-            { States.Scape, new WizardEscapeState()}
+            { States.Attack1, new WizardAttack01State()}
         };
 
         Wizard Owner = owner as Wizard;

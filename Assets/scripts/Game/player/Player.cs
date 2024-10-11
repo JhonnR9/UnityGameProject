@@ -32,6 +32,7 @@ public class Player : Character
     {
         base.Update();
         InputProvider.Update();
+        Debug.Log(StateMachine.CurrentState);
         
     }
     public override void FixedUpdate()

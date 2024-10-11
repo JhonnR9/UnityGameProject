@@ -22,98 +22,56 @@ public class PlayerStateMachine : StateMachine
             { States.Attack, new PlayerAttack1State() }
         };
 
-        AddTransitions(owner);
-    }
+        var Owner = (Player)owner;
 
-    private void AddTransitions(Character owner)
-    {
-        Player player = owner as Player;
-
-        // Transições para ataque
-        AddAttackTransitions(player);
-
-        // Transições para pular
-        AddJumpTransitions(player);
-
-        // Transições para correr
-        AddRunTransitions(player);
-
-        // Transições para ficar parado
-        AddIdleTransitions(player);
-    }
-
-    private void AddAttackTransitions(Player player)
-    {
+        // Qualquer Estado -> Attack: Transição para o estado de ataque se o jogador iniciar um ataque
         TransitionManager.AddAnyStateTransition(
-            states[States.Attack], () => player.InputProvider.IsAttacking
+            states[States.Attack],
+            () => Owner.InputProvider.IsAttacking
         );
 
-        // Permitir voltar para Idle ou Run após o ataque, dependendo do estado anterior
+        // Qualquer Estado -> Jump: Transição para o estado de pulo se o jogador apertar o botão de pulo, estiver no chão, e não estiver atacando
+        TransitionManager.AddAnyStateTransition(
+            states[States.Jump],
+            () => Owner.InputProvider.IsJumping && Owner.IsGrounded && Owner.StateMachine.CurrentState != states[States.Attack]
+        );
+
+        // Attack -> Idle: Transição para o estado parado quando a animação de ataque termina
         TransitionManager.AddTransition(
             states[States.Attack], states[States.Idle],
-            () => player.IsAnimationFinished() && player.IsGrounded
+            () => Owner.IsAnimationFinished()
         );
+
+        // Attack -> Run: Transição para o estado de corrida quando a animação de ataque termina, o jogador está no chão e há movimento horizontal
         TransitionManager.AddTransition(
             states[States.Attack], states[States.Run],
-            () => player.IsAnimationFinished() && player.IsGrounded && Mathf.Abs(player.Body.velocity.x) > 0.01f
-        );
-    }
-
-    private void AddJumpTransitions(Player player)
-    {
-        // Transição para Jump
-        TransitionManager.AddTransition(
-            states[States.Idle], states[States.Jump],
-            () => player.InputProvider.IsJumping && player.IsGrounded
-        );
-        TransitionManager.AddTransition(
-            states[States.Run], states[States.Jump],
-            () => player.IsGrounded && player.InputProvider.IsJumping
+            () => Owner.IsAnimationFinished() && Owner.IsGrounded && Mathf.Abs(Owner.InputProvider.HorizontalAxis) > 0.01f
         );
 
-
-        // Retornar ao Idle ou Run após o salto
+        // Jump -> Idle: Transição para o estado parado após o pulo, se a velocidade horizontal for insignificante e o jogador estiver no chão
         TransitionManager.AddTransition(
             states[States.Jump], states[States.Idle],
-            () => Mathf.Abs(player.Body.velocity.x) < 0.01f && player.IsGrounded
+            () => Mathf.Abs(Owner.Body.velocity.x) < 0.01f && Owner.IsGrounded
         );
+
+        // Jump -> Run: Transição para o estado de corrida após o pulo, se houver movimento horizontal e o jogador estiver no chão
         TransitionManager.AddTransition(
             states[States.Jump], states[States.Run],
-            () => Mathf.Abs(player.Body.velocity.x) > 0.01f && player.IsGrounded
+            () => Mathf.Abs(Owner.Body.velocity.x) > 0.01f && Owner.IsGrounded
         );
-    }
 
-    private void AddIdleTransitions(Player player)
-    {
-        // Transição de Idle para Run
+        // Idle -> Run: Transição para o estado de corrida se houver movimento horizontal enquanto o jogador está parado
         TransitionManager.AddTransition(
             states[States.Idle], states[States.Run],
-            () => Mathf.Abs(player.InputProvider.HorizontalAxis) > 0
+            () => Mathf.Abs(Owner.InputProvider.HorizontalAxis) > 0
         );
 
-        // Retornar ao Idle se não houver movimento
+        // Run -> Idle: Transição para o estado parado se o jogador estiver no chão e a velocidade horizontal for insignificante
         TransitionManager.AddTransition(
             states[States.Run], states[States.Idle],
-            () => Mathf.Abs(player.Body.velocity.x) < 0.01f && player.IsGrounded
+            () => Mathf.Abs(Owner.Body.velocity.x) < 0.01f && Owner.IsGrounded
         );
     }
-
-    private void AddRunTransitions(Player player)
-    {
-        // Transição de Idle para Run
-        TransitionManager.AddTransition(
-            states[States.Idle], states[States.Run],
-            () => Mathf.Abs(player.InputProvider.HorizontalAxis) > 0 && player.IsGrounded // Correndo só se estiver no chão
-        );
-
-        // Impedir correr durante o salto
-        TransitionManager.AddTransition(
-            states[States.Jump], states[States.Run],
-            () => false // Sempre falso, impedindo a transição
-        );
-
-    }
-
 
     public void TransitionTo(States newState)
     {

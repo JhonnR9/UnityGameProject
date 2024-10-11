@@ -52,6 +52,6 @@ public class WizardAttack01State : WizardState
     {
         base.Exit();
         Owner.FieldOfVision = originalFieldOfVision;  // Restaura o campo de visão original
-        //Owner.LastKnowPlayerDistance = -1;  // Reseta a distância ao sair do estado
+       
     }
 }
