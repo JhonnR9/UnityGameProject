@@ -3,15 +3,14 @@ using Game.Events;
 
 public class WizardChaseState : WizardState
 {
-    private float originalFildOfVision;
+    private float originalFieldOfVision;
+
     public override void Enter(Character owner)
     {
         base.Enter(owner);
         Owner.Animator.Play("WizardRun");
-        originalFildOfVision = Owner.FieldOfVision;
-        Owner.FieldOfVision = Owner.ShotRange * 1.3f;
-
-
+        originalFieldOfVision = Owner.FieldOfVision;
+        Owner.FieldOfVision = Owner.FieldOfVision * 1.5f;  // Aumentar levemente o campo de visão para maior detecção durante a perseguição
     }
 
     public override void FixedUpdate()
@@ -23,34 +22,40 @@ public class WizardChaseState : WizardState
 
         foreach (var hit in hits)
         {
-            GameObject gameObject = hit.collider.gameObject;
-            Player player = gameObject.GetComponent<Player>();
-            if (player != null)
+            if (hit.collider != null)
             {
-                playerFound = true;
-                Owner.LastKnowPlayerDistance = hit.distance;
+                GameObject gameObject = hit.collider.gameObject;
+                Player player = gameObject.GetComponent<Player>();
 
-                if (hit.distance > Owner.ShotRange )
+                if (player != null)
                 {
-                    Owner.AddInput(Owner.GetLookDirection());
-                }
+                    playerFound = true;
+                    Owner.LastKnowPlayerDistance = hit.distance;
 
-                Owner.ApplyFlip(player.transform.position.x > Owner.transform.position.x);
-                break;
+                    // Se o jogador está fora do alcance de tiro, continua perseguindo
+                    if (hit.distance > Owner.ShotRange)
+                    {
+                        Owner.AddInput(Owner.GetLookDirection());
+                    }
+
+                    // Aplica flip para olhar na direção correta
+                    Owner.ApplyFlip(player.transform.position.x > Owner.transform.position.x);
+                    break;  // Encerra o loop quando o jogador for encontrado
+                }
             }
         }
 
+        // Se o jogador não for encontrado, reseta a distância para indicar perda de visão
         if (!playerFound)
         {
             Owner.LastKnowPlayerDistance = -1;
         }
     }
 
-
     public override void Exit()
     {
         base.Exit();
         Owner.LastKnowPlayerDistance = -1;  // Reseta ao sair do estado
-        Owner.FieldOfVision = originalFildOfVision;
+        Owner.FieldOfVision = originalFieldOfVision;  // Restaura o campo de visão original
     }
 }

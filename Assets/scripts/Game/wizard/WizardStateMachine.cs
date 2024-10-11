@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using System.Drawing;
-using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class WizardStateMachine : StateMachine
@@ -13,8 +11,6 @@ public class WizardStateMachine : StateMachine
 
     private Dictionary<States, IState> states;
 
-    
-
     public override void Initialize(IState startingState, Character owner)
     {
         base.Initialize(startingState, owner);
@@ -26,31 +22,30 @@ public class WizardStateMachine : StateMachine
             { States.Chase, new WizardChaseState()},
             { States.Attack1, new WizardAttack01State()},
             { States.Attack2, new WizardAttack02State()},
-            { States.Scape, new WizardEscapeState()} 
+            { States.Scape, new WizardEscapeState()}
         };
 
         Wizard Owner = owner as Wizard;
+
         // Patrol -> Chase: Se o jogador estiver dentro do campo de visão
         TransitionManager.AddTransition(states[States.Patrol], states[States.Chase],
-            () => Owner.LastKnowPlayerDistance != -1 && Owner.LastKnowPlayerDistance < Owner.FieldOfVision
+            () => Owner.LastKnowPlayerDistance != -1 
         );
 
         // Chase -> Attack1: Se o jogador estiver dentro da distância de ataque
         TransitionManager.AddTransition(states[States.Chase], states[States.Attack1],
-            () => Owner.LastKnowPlayerDistance <= Owner.ShotRange 
+            () => Owner.LastKnowPlayerDistance < Owner.ShotRange  && Owner.LastKnowPlayerDistance > -1
         );
 
-        // Attack1 -> Chase: Se o jogador se distanciar após o ataque ou perder o rastro
+        // Attack1 -> Chase: Se o jogador se afastar após o ataque, mas ainda estiver visível
         TransitionManager.AddTransition(states[States.Attack1], states[States.Chase],
-            () =>  Owner.LastKnowPlayerDistance == -1 
+            () => Owner.LastKnowPlayerDistance > Owner.ShotRange && Owner.LastKnowPlayerDistance < Owner.FieldOfVision 
         );
 
-        /*/ Chase -> Patrol: Se o mago perder completamente a visão do jogador
+        // Chase -> Patrol: Se o mago perder completamente a visão do jogador
         TransitionManager.AddTransition(states[States.Chase], states[States.Patrol],
-            () => Owner.LastKnowPlayerDistance == -1
-        );*/
-
-
+            () => Owner.LastKnowPlayerDistance == -1 
+        );
 
     }
 
@@ -58,6 +53,4 @@ public class WizardStateMachine : StateMachine
     {
         TransitionTo(states[newState]);
     }
-
-
 }

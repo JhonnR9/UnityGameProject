@@ -696,7 +696,7 @@ Transform:
   m_GameObject: {fileID: 605316406}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.88, y: -1.79, z: 0}
+  m_LocalPosition: {x: 4.82, y: 3.21, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -791,10 +791,9 @@ MonoBehaviour:
   friction: 0.38
   groundCheckDistance: 0.15
   slopeTolerance: 0.5
-  maxPatrolDistance: 1.5
-  attackDistance: 2
-  fieldOfVision: 4
-  shotRange: 5
+  maxPatrolDistance: 2
+  fieldOfVision: 5
+  shotRange: 6
   rayNumberVision: 10
 --- !u!1 &763980512
 GameObject:
@@ -874,7 +873,7 @@ Transform:
   m_GameObject: {fileID: 763980512}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.54, y: -1.99, z: 0}
+  m_LocalPosition: {x: -6.61, y: -1.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -963,7 +962,7 @@ Transform:
   m_GameObject: {fileID: 1847308070}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.91, y: -1.86, z: 0}
+  m_LocalPosition: {x: -7.17, y: -1.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1087,7 +1086,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847308070}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:

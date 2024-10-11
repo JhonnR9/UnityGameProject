@@ -17,12 +17,11 @@ public class WizardPatrolState : WizardState
     {
         base.Exit();
         Owner.FieldOfVision = originalFildOfVison;
-        Owner.LastKnowPlayerDistance = -1;
+        
     }
     public override void FixedUpdate()
     {
         base.FixedUpdate();
-
 
         Owner.AddInput(direction);
 
@@ -34,6 +33,7 @@ public class WizardPatrolState : WizardState
             distanceTravelled = 0f;
         }
 
+        bool playerDetected = false;  // Verifica se o jogador foi detectado
 
         RaycastHit2D[] hits = Owner.RaycastHalfCircle(Owner.FieldOfVision, Owner.RayNumberVision);
 
@@ -46,15 +46,22 @@ public class WizardPatrolState : WizardState
                 if (gameObject.GetComponent<Player>() != null)
                 {
                     Owner.LastKnowPlayerDistance = hit.distance;
-             
+                    playerDetected = true;  // Jogador detectado
+                    break;  // Sai do loop, pois o jogador foi encontrado
                 }
             }
         }
 
-        Vector3 Scale = Owner.transform.localScale;
-        Scale.x = Owner.Body.velocity.x > 0  ? 1:-1;
-        Owner.transform.localScale = Scale;
-        
+        // Se o jogador não foi detectado, resetar a distância
+        if (!playerDetected)
+        {
+            Owner.LastKnowPlayerDistance = -1;
+        }
 
+        // Inverte a direção do sprite
+        Vector3 Scale = Owner.transform.localScale;
+        Scale.x = Owner.Body.velocity.x > 0 ? 1 : -1;
+        Owner.transform.localScale = Scale;
     }
+
 }
