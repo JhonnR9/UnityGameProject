@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D)), RequireComponent(typeof(BoxCollider2D))]
-public class Pawn : MonoBehaviour, IPawn
+public class Pawn : Actor, IPawn
 {
     protected Rigidbody2D rb;
     private Vector2 velocity = Vector2.zero; // Velocidade atual
@@ -24,8 +24,9 @@ public class Pawn : MonoBehaviour, IPawn
 
     public bool IsGrounded { get => IsOnGround(); }
 
-    public virtual void Awake()
+    public override void Awake()
     {
+        base.Awake();
         rb = GetComponent<Rigidbody2D>();
     }
 

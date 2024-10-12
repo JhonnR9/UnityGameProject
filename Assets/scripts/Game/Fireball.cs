@@ -19,7 +19,7 @@ public class Fireball : Pawn
     public override void Awake()
     {
         base.Awake();
-        handle = EventManager.Instance.GetEventHandle<CharacterEventHandle>();
+        handle = events.GetEventHandle<CharacterEventHandle>();
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

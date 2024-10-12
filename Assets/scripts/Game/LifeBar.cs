@@ -1,11 +1,15 @@
 using Game.Events;
 using UnityEngine;
+using System;
 using UnityEngine.UI;
 
-public class LifeBar : MonoBehaviour
+public class LifeBar : Actor
 {
-    float MaxLife = 100f;
-    float AmountLife = 100f;
+    private string playerId;
+    [SerializeField]
+    private float MaxLife = 100f;
+    [SerializeField]
+    private float AmountLife = 100f;
 
     private float MinWidth;
     private float MaxWidth;
@@ -18,8 +22,14 @@ public class LifeBar : MonoBehaviour
     private RectTransform RectTransform;
     private Image image;
 
-    private void Awake()
+    [SerializeField] 
+    private Color startColor;
+    [SerializeField]
+    private Color endColor;
+
+    public override void Awake()
     {
+        base.Awake();
         RectTransform = GetComponent<RectTransform>();
         image = GetComponent<Image>();
 
@@ -30,17 +40,39 @@ public class LifeBar : MonoBehaviour
         minPosition = 0;
     }
 
-    void Start()
+    public override void Start()
     {
-        var handle = EventManager.Instance.GetEventHandle<CharacterEventHandle>();
-        handle.OnCharacterDamage += OnDamage;
+        base.Start();
+
         UpdateLifeBar();
+
     }
 
+    public override void BindEvents(EventManager e)
+    {
+        base.BindEvents(e);
+
+        e.GetEventHandle<CharacterEventHandle>().OnCharacterDamage += OnDamage; 
+        e.GetEventHandle<PlayerEventHandle>().OnPlayerGenerateID += OnPlayerGenerateID;
+
+    }
+
+    private void OnPlayerGenerateID (string id, CharacterStatus status)
+    {
+        playerId = id;
+        MaxLife = status.MaxLife;
+        AmountLife = status.Life;
+      
+    }
     public void OnDamage(string id, float damageAmount)
     {
-        AmountLife -= damageAmount;
-        UpdateLifeBar();
+      
+        if (id == playerId)
+        {
+            AmountLife -= damageAmount;
+            UpdateLifeBar();
+        }
+
     }
 
     public void UpdateLifeBar()
@@ -61,10 +93,6 @@ public class LifeBar : MonoBehaviour
 
     private void UpdateColor(float lifePercentage)
     {
-        Color startColor = Color.green; 
-        Color endColor = Color.red; 
-
-        image.color = Color.Lerp(endColor, startColor, lifePercentage);
-
+        //image.color = Color.Lerp(endColor, startColor, lifePercentage);
     }
 }

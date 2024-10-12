@@ -8,7 +8,13 @@ public class Enemy : Character
     public override void Awake()
     {
         base.Awake();
-        EventManager.Instance.AddEventHandle<EnemyEventHandle>();
+       
+    }
+
+    public override void RegisterEvents(EventManager e)
+    {
+        base.RegisterEvents(e);
+        e.AddEventHandle<EnemyEventHandle>();
     }
 
 

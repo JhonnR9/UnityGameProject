@@ -6,4 +6,5 @@ public class CharacterEventHandle : EventHandle
 {
     // param int is amount of damage
     public Action<string,float> OnCharacterDamage;
+
 }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Game.Events;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterStatus))]
@@ -21,26 +22,34 @@ public class Character : Pawn
         base.Awake();
         animator = GetComponent<Animator>();
         status = GetComponent<CharacterStatus>();
-        EventManager.Instance.AddEventHandle<CharacterEventHandle>();
 
         if (ID == "NULL")
         {
             ID = Guid.NewGuid().ToString();
+
         }
 
         //Debug.Log($"{name} Awake ID: " + ID);
 
     }
 
-    public virtual void Start()
+    public override void RegisterEvents(EventManager e)
     {
-        var handle = EventManager.Instance.GetEventHandle<CharacterEventHandle>();
+        base.RegisterEvents(e);
+        e.AddEventHandle<CharacterEventHandle>();
+    }
+
+    public override void BindEvents(EventManager e)
+    {
+        base.BindEvents(e);
+        var handle = e.GetEventHandle<CharacterEventHandle>();
         handle.OnCharacterDamage += OnDamage;
     }
+
     public virtual void OnDamage(string id ,float damageAmount)
     {
-       
-        if (id.Equals(ID)) 
+     
+        if (id == (ID)) 
         {
             status.Life -= damageAmount;
         }
@@ -52,7 +61,7 @@ public class Character : Pawn
     public bool IsAnimationFinished()
     {
         AnimatorStateInfo stateInfo = Animator.GetCurrentAnimatorStateInfo(0);
-        Debug.Log(stateInfo.normalizedTime);
+        //Debug.Log(stateInfo.normalizedTime);
         return stateInfo.normalizedTime >= 1.0f && !Animator.IsInTransition(0);
 
     }
