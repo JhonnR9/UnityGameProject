@@ -66,7 +66,11 @@ namespace Game.Events
                 eventDictionary = new Dictionary<Type, EventHandle>();
             }
             T handle = new T();
-            eventDictionary.Add(typeof(T), handle);
+            if (!eventDictionary.ContainsKey(typeof(T)))
+            {
+                eventDictionary.Add(typeof(T), handle);
+            }
+      
         }
 
     }

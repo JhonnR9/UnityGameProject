@@ -1,36 +1,45 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Game.Events;
+using Unity.Mathematics;
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterStatus))]
 public class Character : Pawn 
 {
     private Animator animator;
+    private CharacterStatus status;
     public Animator Animator => animator;
     public StateMachine StateMachine { get; protected set; }
+    public CharacterStatus Status => status;
+    public string ID { get; private set; }
+
 
     public override void Awake()
     {
         base.Awake();
         animator = GetComponent<Animator>();
-
+        status = GetComponent<CharacterStatus>();
+        EventManager.Instance.AddEventHandle<CharacterEventHandle>();
+        ID = Guid.NewGuid().ToString();
     }
 
-    public virtual void Update()
+    public virtual void Start()
     {
-        StateMachine?.Update();
+        var handle = EventManager.Instance.GetEventHandle<CharacterEventHandle>();
+        handle.OnCharacterDamage += OnDamage;
+    }
+    public virtual void OnDamage(string id ,float damageAmount)
+    {
+    
+        if (id == ID) 
+        {
+            status.Life -= damageAmount;
+        }
     }
 
-    public override void FixedUpdate()
-    {
-        base.FixedUpdate();
-        StateMachine?.FixedUpdate();
-    }
 
-    public virtual void LateUpdate()
-    {
-        StateMachine?.LateUpdate();
-    }
 
     public bool IsAnimationFinished()
     {
@@ -82,6 +91,22 @@ public class Character : Pawn
         }
 
         return hitResults.ToArray();
+    }
+
+    public virtual void Update()
+    {
+        StateMachine?.Update();
+    }
+
+    public override void FixedUpdate()
+    {
+        base.FixedUpdate();
+        StateMachine?.FixedUpdate();
+    }
+
+    public virtual void LateUpdate()
+    {
+        StateMachine?.LateUpdate();
     }
 
 }

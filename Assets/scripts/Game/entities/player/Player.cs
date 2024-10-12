@@ -9,7 +9,6 @@ public class Player : Character
     [SerializeField] private float jumpForce = 8f;
 
     private PlayerInputProvider inputProvider;
-    private PlayerEventHandle handle;
 
     public float JumpForce=> jumpForce;
     public PlayerInputProvider InputProvider => inputProvider;
@@ -20,12 +19,12 @@ public class Player : Character
         inputProvider = new PlayerInputProvider();
         EventManager.Instance.AddEventHandle<PlayerEventHandle>();
     }
-    public  void Start()
+    public override  void Start()
     {
         StateMachine = new PlayerStateMachine();
         StateMachine?.Initialize(new PlayerIdleState(), this);
       
-        handle = EventManager.Instance.GetEventHandle<PlayerEventHandle>();
+  
     }
 
     public override void Update()
@@ -34,10 +33,21 @@ public class Player : Character
         InputProvider.Update();
         
     }
-    public override void FixedUpdate()
+
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        base.FixedUpdate();
-        handle.OnPlayerPositionChanged?.Invoke(transform.position);
+        Character character = collision.gameObject.GetComponent<Character>();
+ 
+        if (character != null)
+        {
+            var handle = EventManager.Instance.GetEventHandle<CharacterEventHandle>();
+            handle.OnCharacterDamage.Invoke(character.ID ,Status.Damage);
+        }
+    }
+    public override void OnDamage(string id, float amount)
+    {
+        base.OnDamage(id, amount);
+        Debug.Log("ok");
     }
 
 

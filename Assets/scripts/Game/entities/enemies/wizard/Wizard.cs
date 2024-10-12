@@ -10,9 +10,10 @@ public class Wizard : Enemy
     [SerializeField] private float fieldOfVision = 10;
     [SerializeField] private float shotRange = 15;
     [SerializeField] private int rayNumberVision = 8;
+    [SerializeField] private GameObject fireball;
 
     public float MaxPatrolDistance => maxPatrolDistance;
-
+    public GameObject Fireball => fireball; 
     public int RayNumberVision => rayNumberVision;
     public float ShotRange => shotRange;
     public float FieldOfVision
@@ -24,13 +25,15 @@ public class Wizard : Enemy
 
     public float LastKnowPlayerDistance { get; set; } = -1;
     
-    public void Start()
+    public override void Start()
     {
+        base.Start();
         StateMachine = new WizardStateMachine();
         StateMachine?.Initialize(new WizardPatrolState(), this);
 
         
     }
 
-    
+
+
 }

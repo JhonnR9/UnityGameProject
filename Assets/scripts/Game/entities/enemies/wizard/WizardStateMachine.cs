@@ -3,10 +3,9 @@ using UnityEngine;
 
 public class WizardStateMachine : StateMachine
 {
-    GameObject player;
     public enum States
     {
-        Idle, Patrol, Chase, Attack1, Attack2, Scape
+        Patrol, Chase, Attack1
     }
 
     private Dictionary<States, IState> states;

@@ -6,8 +6,8 @@ using UnityEngine;
 public class Pawn : MonoBehaviour, IPawn
 {
     protected Rigidbody2D rb;
-    private float direction = 0; // Direção que o jogador está pressionando
     private Vector2 velocity = Vector2.zero; // Velocidade atual
+    private Vector2 inputDirection = Vector2.zero; // Armazena o input
 
     [SerializeField] private float maxSpeed = 5.0f; // Velocidade máxima
     [SerializeField] private float acceleration = 2.0f; // Aceleração ao pressionar as teclas
@@ -16,7 +16,7 @@ public class Pawn : MonoBehaviour, IPawn
     [SerializeField] private float slopeTolerance = 0.5f;
 
     public float MaxSpeed { get => maxSpeed; set => maxSpeed = value; }
-    public float Acceleration { get => acceleration; set => acceleration = value; } // Corrigido
+    public float Acceleration { get => acceleration; set => acceleration = value; }
     public float Friction { get => friction; set => friction = value; }
     public float GroundCheckDistance { get => groundCheckDistance; set => groundCheckDistance = value; }
     public float SlopeTolerance { get => slopeTolerance; set => slopeTolerance = value; }
@@ -32,9 +32,10 @@ public class Pawn : MonoBehaviour, IPawn
     public virtual void FixedUpdate()
     {
         // Atualiza a velocidade baseada na direção do input
-        if (direction != 0)
+        if (inputDirection != Vector2.zero)
         {
-            velocity.x = Mathf.MoveTowards(velocity.x, direction * maxSpeed, acceleration);
+            velocity.x = Mathf.MoveTowards(velocity.x, inputDirection.x * maxSpeed, acceleration);
+            velocity.y = Mathf.MoveTowards(velocity.y, inputDirection.y * maxSpeed, acceleration);
         }
         else
         {
@@ -44,17 +45,26 @@ public class Pawn : MonoBehaviour, IPawn
 
         // Limita a velocidade máxima
         velocity.x = Mathf.Clamp(velocity.x, -maxSpeed, maxSpeed);
+        velocity.y = Mathf.Clamp(velocity.y, -maxSpeed, maxSpeed);
 
         // Movimenta o Rigidbody2D
-        rb.velocity = new Vector2(velocity.x, rb.velocity.y);
-
-        direction = 0;
+        rb.velocity = new Vector2(velocity.x, rb.velocity.y); // Mantemos a componente Y para gravidade/impulso
+        inputDirection = Vector2.zero; // Reseta a direção de input
     }
 
+    // Função que recebe um Vector2 como input
+    public void AddInput(Vector2 input)
+    {
+        inputDirection += input;
+        inputDirection.x = Mathf.Clamp(inputDirection.x, -1, 1); // Limita a direção horizontal entre -1 e 1
+        inputDirection.y = Mathf.Clamp(inputDirection.y, -1, 1); // Limita a direção vertical entre -1 e 1
+    }
+
+    // Função antiga que recebe apenas um float (input horizontal)
     public void AddInput(float horizontalInput)
     {
-        direction += horizontalInput;
-        direction = Mathf.Clamp(direction, -1, 1); // Limita a direção entre -1 e 1
+        inputDirection.x += horizontalInput;
+        inputDirection.x = Mathf.Clamp(inputDirection.x, -1, 1); // Limita a direção horizontal entre -1 e 1
     }
 
     public void Bounce(float amount)
