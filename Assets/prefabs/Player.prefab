@@ -55,7 +55,7 @@ MonoBehaviour:
   friction: 0.9
   groundCheckDistance: 0.1
   slopeTolerance: 0.5
-  jumpForce: 5
+  jumpForce: 8
 --- !u!212 &7503567510673475719
 SpriteRenderer:
   m_ObjectHideFlags: 0

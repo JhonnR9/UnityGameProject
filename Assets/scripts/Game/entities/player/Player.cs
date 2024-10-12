@@ -21,10 +21,10 @@ public class Player : Character
     }
     public override  void Start()
     {
+        base.Start();
         StateMachine = new PlayerStateMachine();
         StateMachine?.Initialize(new PlayerIdleState(), this);
-      
-  
+
     }
 
     public override void Update()
@@ -43,11 +43,6 @@ public class Player : Character
             var handle = EventManager.Instance.GetEventHandle<CharacterEventHandle>();
             handle.OnCharacterDamage.Invoke(character.ID ,Status.Damage);
         }
-    }
-    public override void OnDamage(string id, float amount)
-    {
-        base.OnDamage(id, amount);
-        Debug.Log("ok");
     }
 
 

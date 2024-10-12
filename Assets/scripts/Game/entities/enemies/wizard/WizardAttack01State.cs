@@ -7,9 +7,6 @@ public class WizardAttack01State : WizardState
     private Transform fireSpawnPoint;
     Vector3 playerPosition = Vector3.zero;
 
-    float time = 2;
-    float cTime = 0;
-
     public override void Enter(Character owner)
     {
         base.Enter(owner);
@@ -19,18 +16,16 @@ public class WizardAttack01State : WizardState
         if (fireSpawnPoint == null)
         { 
             fireSpawnPoint = Owner.transform.GetChild(0); 
-
+           
         }
 
     }
 
     public override void FixedUpdate()
     {
-        cTime += Time.deltaTime;
         base.FixedUpdate();
-        if (cTime >time)
+        if (Owner.IsAnimationFinished())
         {
-            
             var fire = GameObject.Instantiate(Owner.Fireball, fireSpawnPoint.position, Quaternion.identity);
             fire.GetComponent<SpriteRenderer>().sortingLayerName = ("entity");
 
@@ -38,8 +33,10 @@ public class WizardAttack01State : WizardState
             fireball.Direction = ( playerPosition - Owner.transform.position );
             fireball.Status = Owner.Status;
 
+            Owner.Animator.Rebind();
             Owner.Animator.Play("WizardAttack");
-            cTime = 0;
+    
+
         }
         RaycastHit2D[] hits = Owner.RaycastHalfCircle(Owner.FieldOfVision, Owner.RayNumberVision);
 

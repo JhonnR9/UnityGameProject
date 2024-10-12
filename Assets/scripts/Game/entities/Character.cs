@@ -13,7 +13,7 @@ public class Character : Pawn
     public Animator Animator => animator;
     public StateMachine StateMachine { get; protected set; }
     public CharacterStatus Status => status;
-    public string ID { get; private set; }
+    public string ID { get; private set; } = "NULL";
 
 
     public override void Awake()
@@ -22,7 +22,14 @@ public class Character : Pawn
         animator = GetComponent<Animator>();
         status = GetComponent<CharacterStatus>();
         EventManager.Instance.AddEventHandle<CharacterEventHandle>();
-        ID = Guid.NewGuid().ToString();
+
+        if (ID == "NULL")
+        {
+            ID = Guid.NewGuid().ToString();
+        }
+
+        //Debug.Log($"{name} Awake ID: " + ID);
+
     }
 
     public virtual void Start()
@@ -32,11 +39,12 @@ public class Character : Pawn
     }
     public virtual void OnDamage(string id ,float damageAmount)
     {
-    
-        if (id == ID) 
+       
+        if (id.Equals(ID)) 
         {
             status.Life -= damageAmount;
         }
+       
     }
 
 
@@ -44,9 +52,11 @@ public class Character : Pawn
     public bool IsAnimationFinished()
     {
         AnimatorStateInfo stateInfo = Animator.GetCurrentAnimatorStateInfo(0);
+        Debug.Log(stateInfo.normalizedTime);
         return stateInfo.normalizedTime >= 1.0f && !Animator.IsInTransition(0);
 
     }
+
 
     public RaycastHit2D[] MakeRaycast(Vector2 direction, float distance, int bufferSize)
     {

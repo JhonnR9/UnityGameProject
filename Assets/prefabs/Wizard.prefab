@@ -86,11 +86,11 @@ MonoBehaviour:
   friction: 0.38
   groundCheckDistance: 0.15
   slopeTolerance: 0.5
-  maxPatrolDistance: 3
-  fieldOfVision: 5
-  shotRange: 3
+  maxPatrolDistance: 8
+  fieldOfVision: 15
+  shotRange: 10
   rayNumberVision: 10
-  fireball: {fileID: 0}
+  fireball: {fileID: 8656521842350986566, guid: 4f3c1ccd66417a74a870b67a4a07f9fa, type: 3}
 --- !u!114 &2364584372301349603
 MonoBehaviour:
   m_ObjectHideFlags: 0
