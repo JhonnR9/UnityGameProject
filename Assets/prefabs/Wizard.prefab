@@ -81,15 +81,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f15c07f13d0b43498e24c5afb9218b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 2
-  acceleration: 2
+  maxSpeed: 5
+  acceleration: 5
   friction: 0.38
   groundCheckDistance: 0.15
   slopeTolerance: 0.5
   maxPatrolDistance: 8
   fieldOfVision: 15
   shotRange: 10
-  rayNumberVision: 10
+  rayNumberVision: 20
   fireball: {fileID: 8656521842350986566, guid: 4f3c1ccd66417a74a870b67a4a07f9fa, type: 3}
 --- !u!114 &2364584372301349603
 MonoBehaviour:

@@ -106,7 +106,7 @@ public class Character : Pawn
             }
 
             // Debug para ver os raios no editor
-            Debug.DrawRay(transform.position, direction * distance, Color.red);
+            //Debug.DrawRay(transform.position, direction * distance, Color.red);
         }
 
         return hitResults.ToArray();

@@ -5,7 +5,7 @@ public class WizardAttack01State : WizardState
 {
     private float originalFieldOfVision;
     private Transform fireSpawnPoint;
-    Vector3 playerPosition = Vector3.zero;
+    Vector2 playerPosition = Vector2.zero;
 
     public override void Enter(Character owner)
     {
@@ -24,15 +24,20 @@ public class WizardAttack01State : WizardState
     public override void FixedUpdate()
     {
         base.FixedUpdate();
+
         if (Owner.IsAnimationFinished())
         {
+
             var fire = GameObject.Instantiate(Owner.Fireball, fireSpawnPoint.position, Quaternion.identity);
             fire.GetComponent<SpriteRenderer>().sortingLayerName = ("entity");
 
             Fireball fireball = fire.GetComponent<Fireball>();
-            fireball.Direction = ( playerPosition - Owner.transform.position );
+
+            fireball.Direction = (playerPosition - Owner.Body.position).normalized;
             fireball.Status = Owner.Status;
 
+
+           
             Owner.Animator.Rebind();
             Owner.Animator.Play("WizardAttack");
     
@@ -54,7 +59,7 @@ public class WizardAttack01State : WizardState
                     {
                         playerFound = true;  // Jogador encontrado
                         Owner.LastKnowPlayerDistance = hit.distance;
-                        playerPosition = player.transform.position;
+                        playerPosition = player.Body.position;
 
                         // Ajusta a direção para olhar em direção ao jogador
                         Owner.ApplyFlip(player.transform.position.x > Owner.transform.position.x);

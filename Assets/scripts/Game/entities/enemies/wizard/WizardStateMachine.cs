@@ -5,7 +5,7 @@ public class WizardStateMachine : StateMachine
 {
     public enum States
     {
-        Patrol, Chase, Attack1
+        Patrol, Chase, Attack1, Knockback
     }
 
     private Dictionary<States, IState> states;
@@ -18,7 +18,8 @@ public class WizardStateMachine : StateMachine
         {
             { States.Patrol, new WizardPatrolState() },
             { States.Chase, new WizardChaseState()},
-            { States.Attack1, new WizardAttack01State()}
+            { States.Attack1, new WizardAttack01State()},
+            { States.Knockback, new WizardHurtState()},
         };
 
         Wizard Owner = owner as Wizard;
@@ -40,8 +41,11 @@ public class WizardStateMachine : StateMachine
 
         // Chase -> Patrol: Se o mago perder completamente a visão do jogador
         TransitionManager.AddTransition(states[States.Chase], states[States.Patrol],
-            () => Owner.LastKnowPlayerDistance == -1 
+            () => Owner.LastKnowPlayerDistance == -1
         );
+
+        TransitionManager.AddAnyStateTransition(states[States.Knockback],
+        () => false);
 
     }
 

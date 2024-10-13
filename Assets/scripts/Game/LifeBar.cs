@@ -93,6 +93,8 @@ public class LifeBar : Actor
 
     private void UpdateColor(float lifePercentage)
     {
-        //image.color = Color.Lerp(endColor, startColor, lifePercentage);
+        var newColor = Color.Lerp(endColor, startColor, lifePercentage);
+        newColor.a = 1;
+        image.color = newColor;
     }
 }

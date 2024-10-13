@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3864397745193018976}
   - component: {fileID: 957068552746227267}
   - component: {fileID: 1582048972983589392}
+  - component: {fileID: 3391501786821736662}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -107,3 +108,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
   tilemap: {fileID: 0}
+--- !u!114 &3391501786821736662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7386255691893209146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 16
+  m_RefResolutionX: 192
+  m_RefResolutionY: 122
+  m_UpscaleRT: 1
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0

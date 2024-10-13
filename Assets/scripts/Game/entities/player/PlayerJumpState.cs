@@ -10,7 +10,7 @@ public class PlayerJumpState : PlayerState
     {
         base.Enter(owner);
         originalFriction = Owner.Friction; // Salva o atrito original
-        Owner.Bounce(Owner.JumpForce);
+        Owner.Bounce(new Vector2(0,Owner.JumpForce));
         Owner.Friction = originalFriction / frictionFactor; // Diminui o atrito enquanto está no ar
         lastInput = Owner.Body.velocity.normalized.x;
         Owner.Animator.Play("SwordmanJump");
@@ -18,7 +18,7 @@ public class PlayerJumpState : PlayerState
 
     public override void FixedUpdate()
     {
-        Owner.AddInput(lastInput); // Continuar o movimento no eixo X
+        Owner.AddInput(lastInput); 
     }
 
 

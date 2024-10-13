@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 10
   acceleration: 10
-  friction: 0.9
+  friction: 5
   groundCheckDistance: 0.15
   slopeTolerance: 0.5
 --- !u!212 &3962859148597310840
@@ -151,7 +151,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &5850315650302894900
 BoxCollider2D:

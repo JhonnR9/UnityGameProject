@@ -40,17 +40,11 @@ public class Player : Character
         events.GetEventHandle<PlayerEventHandle>().OnPlayerGenerateID?.Invoke(ID, Status);
     }
 
-
-    public override void OnDamage(string id, float damageAmount)
-    {
-        base.OnDamage(id, damageAmount);
-    
-    }
-
     public override void Update()
     {
         base.Update();
         InputProvider.Update();
+
    
     }
 
@@ -65,7 +59,7 @@ public class Player : Character
         }
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    public  void OnTriggerEnter2D(Collider2D collision)
     {
         Enemy character = collision.gameObject.GetComponent<Enemy>();
  

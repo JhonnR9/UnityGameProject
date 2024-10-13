@@ -51,7 +51,7 @@ public class PlayerStateMachine : StateMachine
         // Jump -> Idle: Transição para o estado parado após o pulo, se a velocidade horizontal for insignificante e o jogador estiver no chão
         TransitionManager.AddTransition(
             states[States.Jump], states[States.Idle],
-            () => Mathf.Abs(Owner.Body.velocity.x) < 0.01f && Owner.IsGrounded
+            () => Owner.InputProvider.HorizontalAxis == 0f && Owner.IsGrounded
         );
 
         // Jump -> Run: Transição para o estado de corrida após o pulo, se houver movimento horizontal e o jogador estiver no chão
@@ -69,7 +69,7 @@ public class PlayerStateMachine : StateMachine
         // Run -> Idle: Transição para o estado parado se o jogador estiver no chão e a velocidade horizontal for insignificante
         TransitionManager.AddTransition(
             states[States.Run], states[States.Idle],
-            () => Mathf.Abs(Owner.Body.velocity.x) < 0.01f && Owner.IsGrounded
+            () => Owner.InputProvider.HorizontalAxis == 0f && Owner.IsGrounded
         );
     }
 
