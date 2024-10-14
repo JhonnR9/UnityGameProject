@@ -7,15 +7,11 @@ public class Pawn : Actor
     protected Rigidbody2D rb;
     private Vector2 inputDirection = Vector2.zero;
 
-    [SerializeField] private float maxSpeed = 5.0f;
-    [SerializeField] private float acceleration = 2.0f;
-    [SerializeField] private float friction = 0.0f; 
+    [SerializeField] private float Speed = 5.0f;
     [SerializeField] private float groundCheckDistance = 0.15f;
     [SerializeField] private float slopeTolerance = 0.5f;
 
-    public float MaxSpeed { get => maxSpeed; set => maxSpeed = value; }
-    public float Acceleration { get => acceleration; set => acceleration = value; }
-    public float Friction { get => friction; set => friction = value; }
+    public float MaxSpeed { get => Speed; set => Speed = value; }
     public float GroundCheckDistance { get => groundCheckDistance; set => groundCheckDistance = value; }
     public float SlopeTolerance { get => slopeTolerance; set => slopeTolerance = value; }
     public Rigidbody2D Body => rb;
@@ -31,39 +27,15 @@ public class Pawn : Actor
 
     private void HandleMovement()
     {
-            Vector2 newVelocity = Vector2.zero;
-        if (inputDirection.magnitude > 0)
-        {
-            if(inputDirection.x > 0)
-            {
-                newVelocity.x = Mathf.MoveTowards(newVelocity.x, MaxSpeed, Acceleration);
-               // newVelocity.y = inputDirection.y * -maxSpeed;
-            }
-            else
-            {
-                newVelocity.x = Mathf.MoveTowards(newVelocity.x, -MaxSpeed, Acceleration);
-               // newVelocity.y = inputDirection.y * maxSpeed;
-            }
-
-        }
-        else
-        {
-            newVelocity.x = Mathf.MoveTowards(rb.velocity.x, 0, Friction);
-
-        }
-
+        Vector2 newVelocity = rb.velocity;
+        newVelocity = inputDirection * Speed;
 
         if (inputDirection.y == 0)
         {
             newVelocity.y = rb.velocity.y;
-
         }
 
-       
-
         rb.velocity = newVelocity;
-
-       // rb.velocity = new Vector2(rb.velocity.x, inputDirection.y * maxSpeed);
 
         inputDirection = Vector2.zero;
     }

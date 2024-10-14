@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 8240776588628686480}
   - component: {fileID: 8072572791327589924}
+  - component: {fileID: 7675746357410338677}
   - component: {fileID: 7503567510673475719}
   - component: {fileID: 8773120822942853714}
   - component: {fileID: 8645310924246687987}
   - component: {fileID: 7938394417715176900}
   - component: {fileID: 9189471262218037463}
-  - component: {fileID: 7675746357410338677}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -50,12 +50,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7cc079a3fb7fc1458fed0958c7633a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 20.67
-  acceleration: 2.24
-  friction: 0
+  Speed: 5
   groundCheckDistance: 0.1
   slopeTolerance: 0.5
-  jumpForce: 34.74
+  jumpForce: 8
+--- !u!114 &7675746357410338677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3314955174357630749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b45a1b5cc82c4d4eac6308846f1f768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLife: 100
+  life: 100
+  damage: 10
 --- !u!212 &7503567510673475719
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -246,18 +259,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.46, y: 1.07}
   m_EdgeRadius: 0
---- !u!114 &7675746357410338677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3314955174357630749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b45a1b5cc82c4d4eac6308846f1f768, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxLife: 100
-  life: 100
-  damage: 10

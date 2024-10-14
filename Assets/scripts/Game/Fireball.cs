@@ -17,8 +17,8 @@ public class Fireball : Pawn
         if (!isColliding)
         {
            // Debug.Log($"x: {(Direction).normalized.x}, y: {(Direction).normalized.y}");
-            //AddInput(Direction.normalized);
-            Body.velocity = Direction * 10;
+           AddInput(Direction.normalized);
+            //Body.velocity = Direction * 10;
         }
     }
 

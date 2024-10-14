@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 10
   acceleration: 10
-  friction: 5
+  friction: 0.2
   groundCheckDistance: 0.15
   slopeTolerance: 0.5
 --- !u!212 &3962859148597310840
